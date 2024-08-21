@@ -52,7 +52,7 @@ func GetDiskInfo() ([]DiskInfo, error) {
 	}
 
 	// Verifica e imprime o JSON retornado para debugging
-	logging.Info(out.String())
+	//logging.Info(out.String())
 
 	// A primeira tentativa de deserialização para um único objeto DiskInfo
 	var singleDisk DiskInfo
@@ -112,9 +112,6 @@ func GetRAMInfo() ([]RAMInfo, error) {
 	if err != nil {
 		return nil, err
 	}
-
-	// Verifica e imprime o JSON retornado para debugging
-	logging.Info(out.String())
 
 	// A primeira tentativa de deserialização para um único objeto RAMInfo
 	var singleRAM RAMInfo

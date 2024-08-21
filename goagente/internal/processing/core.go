@@ -48,21 +48,23 @@ func CoreInfos(client *communication.APIClient, route string) {
 			continue
 		}
 		jsonResult = string(jsonBytes)
-		fmt.Println("Resultado JSON:", jsonResult)
 		resp, err := client.GenericPost(route, jsonResult)
 		if err != nil {
 			logging.Error(err)
-			fmt.Println("erro ao enviar as informações para o servidor:", err)
+			fmt.Println("erro ao enviar as informações Core para o servidor:", err)
 			continue
 		}
 		fmt.Println("Resposta do servidor:", resp.Status)
 		if resp.StatusCode != 200 {
-			fmt.Println("erro ao enviar as informações para o servidor.")
-			newErr := fmt.Errorf("erro ao enviar as informações para o servidor, status: %s", resp.Status)
+			fmt.Println("Resultado JSON:", jsonResult)
+			fmt.Println("erro ao enviar as informações Core para o servidor.")
+			newErr := fmt.Errorf("erro ao enviar as informações Core para o servidor, status: %s", resp.Status)
 			logging.Error(newErr)
 		} else {
-			fmt.Println("Informações enviadas com sucesso.")
-			logging.Info("informações enviadas com sucesso.")
+			fmt.Println("Resultado JSON:", jsonResult)
+			fmt.Println("Informações Core enviadas com sucesso.")
+			fmt.Println("")
+			logging.Info("informações Core enviadas com sucesso.")
 		}
 
 		time.Sleep(10 * time.Second)

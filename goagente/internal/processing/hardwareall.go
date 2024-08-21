@@ -62,24 +62,24 @@ func GetHardwareInfo(client *communication.APIClient, route string) {
 		logging.Error(err)
 	} else {
 		jsonResult = string(jsonBytes)
-		logging.Info("Informações de hardware obtidas com sucesso")
-		logging.Info("Resultado JSON: " + jsonResult)
 	}
 
 	resp, err := client.GenericPost(route, jsonResult)
 	if err != nil {
 		logging.Error(err)
-		fmt.Println("Erro ao enviar as informações para o servidor:", err)
+		fmt.Println("Erro ao enviar as informações de hardware para o servidor:", err)
 		return
 	}
-	fmt.Println("Resultado JSON:", jsonResult)
-	fmt.Println("Resposta do servidor:", resp.Status)
 	if resp.StatusCode != 200 {
-		fmt.Println("Erro ao enviar as informações para o servidor.")
-		newErr := fmt.Errorf("erro ao enviar as informações para o servidor, status: %s", resp.Status)
+		fmt.Println("Resultado JSON:", jsonResult)
+		fmt.Println("Erro ao enviar as informações de hardware para o servidor.")
+		newErr := fmt.Errorf("erro ao enviar as informações de hardware para o servidor, status: %s", resp.Status)
 		logging.Error(newErr)
 	} else {
-		fmt.Println("Informações enviadas com sucesso.")
+		fmt.Println("Resposta do servidor:", resp.Status)
+		fmt.Println("Resultado JSON:", jsonResult)
+		fmt.Println("Informações de hardware enviadas com sucesso.")
+		fmt.Println("")
 		logging.Info("Informações de hardware enviadas com sucesso.")
 	}
 
