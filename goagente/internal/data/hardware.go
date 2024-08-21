@@ -3,6 +3,7 @@ package data
 import (
 	"bytes"
 	"encoding/json"
+	"goagente/internal/logging"
 	"os/exec"
 )
 
@@ -43,20 +44,35 @@ func GetDiskInfo() ([]DiskInfo, error) {
 	cmd := exec.Command("powershell", "-Command", "Get-PhysicalDisk | Select-Object -Property DeviceID, Model, Size | ConvertTo-Json")
 	var out bytes.Buffer
 	cmd.Stdout = &out
+
 	err := cmd.Run()
 	if err != nil {
+		logging.Error(err)
 		return nil, err
 	}
 
+	// Verifica e imprime o JSON retornado para debugging
+	logging.Info(out.String())
+
+	// A primeira tentativa de deserialização para um único objeto DiskInfo
+	var singleDisk DiskInfo
+	err = json.Unmarshal(out.Bytes(), &singleDisk)
+	if err == nil {
+		// Se for um único objeto, coloca em um slice
+		return []DiskInfo{singleDisk}, nil
+	}
+
+	// Se falhar como objeto único, tenta deserializar como uma lista de objetos
 	var disks []DiskInfo
 	err = json.Unmarshal(out.Bytes(), &disks)
 	if err != nil {
+		logging.Error(err)
 		return nil, err
 	}
 
 	// Converte o tamanho para gigabytes
 	for i := range disks {
-		disks[i].Size = uint64(BytesToGigabytes(disks[i].Size)) // Mantém como uint64
+		disks[i].Size = uint64(BytesToGigabytes(disks[i].Size))
 	}
 
 	return disks, nil
@@ -97,9 +113,23 @@ func GetRAMInfo() ([]RAMInfo, error) {
 		return nil, err
 	}
 
+	// Verifica e imprime o JSON retornado para debugging
+	logging.Info(out.String())
+
+	// A primeira tentativa de deserialização para um único objeto RAMInfo
+	var singleRAM RAMInfo
+	err = json.Unmarshal(out.Bytes(), &singleRAM)
+	if err == nil {
+		// Se for um único objeto, coloca em um slice
+		singleRAM.Capacity = BytesToGigabytes(uint64(singleRAM.Capacity))
+		return []RAMInfo{singleRAM}, nil
+	}
+
+	// Se falhar como objeto único, tenta deserializar como uma lista de objetos
 	var ram []RAMInfo
 	err = json.Unmarshal(out.Bytes(), &ram)
 	if err != nil {
+		logging.Error(err)
 		return nil, err
 	}
 

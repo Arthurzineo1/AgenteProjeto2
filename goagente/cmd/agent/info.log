@@ -1,0 +1,116 @@
+INFO: 2024/08/21 17:24:59 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:24:59 logger.go:35: Arquivo criado: pat.txt
+INFO: 2024/08/21 17:24:59 logger.go:35: O arquivo está vazio.
+INFO: 2024/08/21 17:24:59 logger.go:35: Nenhuma sequência numérica encontrada no nome do computador.
+INFO: 2024/08/21 17:24:59 logger.go:35: Linha adicionada ao arquivo patrimonio: 00000
+INFO: 2024/08/21 17:25:01 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:25:07 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:25:07 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:25:08 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:25:11 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:25:21 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:28:43 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:28:43 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:28:44 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:28:49 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:28:49 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:28:49 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:28:54 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:29:05 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:31:10 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:31:10 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:31:11 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:31:16 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:31:16 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:31:16 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:31:21 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:33:14 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:33:14 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:33:15 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:33:20 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:33:20 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:33:20 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:34:12 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:34:12 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:34:12 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:34:17 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:34:17 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:34:17 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:34:23 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:36:34 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:36:34 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:36:34 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:36:39 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:36:39 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:36:39 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:37:46 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:37:46 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:37:46 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:37:51 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:37:51 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:37:51 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:38:18 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:38:18 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:38:19 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:38:37 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:38:37 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:38:38 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:38:43 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:38:43 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:38:43 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:39:36 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:39:36 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:39:36 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:39:41 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:39:41 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:39:41 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:40:18 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:40:18 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:40:19 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:40:23 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:40:23 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:40:23 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:41:50 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:41:50 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:41:51 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:41:55 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:41:55 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:41:56 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:42:01 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:42:24 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:42:24 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:42:24 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:42:29 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:42:29 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:42:29 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:45:15 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:45:15 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:45:15 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:45:17 logger.go:35: {
+    "DeviceID":  "0",
+    "Model":  "SSSTC CL4-4D512-Q62",
+    "Size":  512110190592
+}
+
+INFO: 2024/08/21 17:45:20 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:45:20 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[{"DeviceID":"0","Model":"SSSTC CL4-4D512-Q62","Size":477}],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:45:20 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:46:45 logger.go:35: Aplicação iniciada com sucesso.
+INFO: 2024/08/21 17:46:45 logger.go:35: O arquivo não está vazio. Seguindo com o código.
+INFO: 2024/08/21 17:46:45 logger.go:35: informações enviadas com sucesso.
+INFO: 2024/08/21 17:46:46 logger.go:35: {
+    "DeviceID":  "0",
+    "Model":  "SSSTC CL4-4D512-Q62",
+    "Size":  512110190592
+}
+
+INFO: 2024/08/21 17:46:49 logger.go:35: {
+    "Manufacturer":  "Samsung",
+    "Capacity":  8589934592,
+    "FormFactor":  12
+}
+
+INFO: 2024/08/21 17:46:50 logger.go:35: Informações de hardware obtidas com sucesso
+INFO: 2024/08/21 17:46:50 logger.go:35: Resultado JSON: {"patrimonio":"00000","disks":[{"DeviceID":"0","Model":"SSSTC CL4-4D512-Q62","Size":477}],"processors":[{"Name":"12th Gen Intel(R) Core(TM) i5-12450H","NumberOfCores":8,"MaxClockSpeed":2000}],"ram":[{"Manufacturer":"Samsung","Capacity":8,"FormFactor":12}],"motherboard":{"Manufacturer":"LENOVO","Product":"LNVNB161216"}}
+INFO: 2024/08/21 17:46:50 logger.go:35: Informações de hardware enviadas com sucesso.
+INFO: 2024/08/21 17:46:56 logger.go:35: informações enviadas com sucesso.

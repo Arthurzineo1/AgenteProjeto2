@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func CoreInfos(client *communication.APIClient) {
+func CoreInfos(client *communication.APIClient, route string) {
 	var jsonResult string
 	for {
 		hostname, err := data.GetHostname()
@@ -49,7 +49,7 @@ func CoreInfos(client *communication.APIClient) {
 		}
 		jsonResult = string(jsonBytes)
 		fmt.Println("Resultado JSON:", jsonResult)
-		resp, err := client.GenericPost(communication.EnviaCoreInfos, jsonResult)
+		resp, err := client.GenericPost(route, jsonResult)
 		if err != nil {
 			logging.Error(err)
 			fmt.Println("erro ao enviar as informações para o servidor:", err)

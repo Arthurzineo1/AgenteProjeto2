@@ -6,10 +6,12 @@ import (
 	"goagente/internal/communication"
 	"goagente/internal/data"
 	"goagente/internal/logging"
+	"goagente/pkg/utils"
+	"math"
 	"os"
 )
 
-func GetHardwareInfo(client *communication.APIClient) {
+func GetHardwareInfo(client *communication.APIClient, route string) {
 	var jsonResult string
 
 	// Lê o número de patrimônio do arquivo pat.txt usando os.ReadFile
@@ -64,7 +66,7 @@ func GetHardwareInfo(client *communication.APIClient) {
 		logging.Info("Resultado JSON: " + jsonResult)
 	}
 
-	resp, err := client.GenericPost(communication.EnviaHardwareInfos, jsonResult)
+	resp, err := client.GenericPost(route, jsonResult)
 	if err != nil {
 		logging.Error(err)
 		fmt.Println("Erro ao enviar as informações para o servidor:", err)
