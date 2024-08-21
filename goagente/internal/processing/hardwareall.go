@@ -24,6 +24,9 @@ func GetHardwareInfo(client *communication.APIClient) {
 		logging.Error(err)
 		disks = []data.DiskInfo{} // Continua com uma lista vazia de discos
 	}
+	for i := range disks {
+		disks[i].Size = uint64(math.Round(utils.BytesToGigabytes(disks[i].Size)))
+	}
 
 	processors, err := data.GetProcessorInfo()
 	if err != nil {
