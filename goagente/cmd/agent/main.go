@@ -21,7 +21,8 @@ func main() {
 	client := communication.NewAPIClient(apiUrl)
 
 	go processing.CoreInfos(client, communication.EnviaCoreInfos)           // executado em uma goroutine looping infinito com sleep de 10 segundos (vai ser aumentado)
-	go processing.GetHardwareInfo(client, communication.EnviaHardwareInfos) // executado apenas 1 vez quando o agente é iniciado
+	go processing.GetHardwareInfo(client, communication.EnviaHardwareInfos) // executado apenas 1 vez quando o agente é
+	go processing.GetProgramsInfo(client, communication.EnviaProgramInfos)  // executado apenas 1 vez quando o agente é iniciado
 
 	select {}
 }
