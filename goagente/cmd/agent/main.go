@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"goagente/internal/communication"
+	"goagente/internal/config"
 	logs "goagente/internal/logging"
+	"goagente/internal/orchestration"
 	"goagente/internal/processing"
 	"time"
 )
@@ -13,17 +15,22 @@ func main() {
 	logs.Init()        // Inicializa os loggers
 	defer logs.Close() // Garante que os arquivos de log serão fechados ao final da execução
 	logs.Info("Aplicação iniciada com sucesso.")
-	// Verifica se o arquivo com o pat existe e o cria, se necessário
+
 	err := processing.CheckAndCreateFile()
 	if err != nil {
 		fmt.Println("Erro:", err)
 	}
+
 	apiUrl := "https://run.mocky.io"
 	client := communication.NewAPIClient(apiUrl)
-	go processing.CoreInfos(client, communication.EnviaCoreInfos)
-	time.Sleep(5 * time.Second)                                             // executado em uma goroutine looping infinito com sleep de 10 segundos (vai ser aumentado)
-	go processing.GetHardwareInfo(client, communication.EnviaHardwareInfos) // executado apenas 1 vez quando o agente é
-	go processing.GetProgramsInfo(client, communication.EnviaProgramInfos)  // executado apenas 1 vez quando o agente é iniciado
+
+	go orchestration.MonitorAndSendCoreInfo(client, communication.EnviaCoreInfos, config.TimeInSecondsForCoreInfoLoop)
+
+	time.Sleep(5 * time.Second)
+
+	orchestration.SendHardwareInfo(client, communication.EnviaHardwareInfos)
+
+	go orchestration.SendProgramInfo(client, communication.EnviaProgramInfos, config.TimeInSecondsForProgramInfoLoop)
 
 	select {}
 }
