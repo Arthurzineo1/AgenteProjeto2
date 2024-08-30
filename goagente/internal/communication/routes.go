@@ -2,8 +2,8 @@ package communication
 
 // Definindo as rotas como strings
 const (
-	EnviaCoreInfos     = "v3/1804faad-24f0-4e25-ada2-945dfb483fb2"
-	EnviaSystemInfos   = "v3/1804faad-24f0-4e25-ada2-945dfb483fb2"
-	EnviaProgramInfos  = "v3/1804faad-24f0-4e25-ada2-945dfb483fb2"
-	EnviaHardwareInfos = "v3/1804faad-24f0-4e25-ada2-945dfb483fb2"
+	EnviaCoreInfos     = "v3/99a7790c-0a09-4dbc-a7f0-d426bc190ed2"
+	EnviaSystemInfos   = "v3/99a7790c-0a09-4dbc-a7f0-d426bc190ed2"
+	EnviaProgramInfos  = "v3/99a7790c-0a09-4dbc-a7f0-d426bc190ed2"
+	EnviaHardwareInfos = "v3/99a7790c-0a09-4dbc-a7f0-d426bc190ed2"
 )

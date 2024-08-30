@@ -3,6 +3,7 @@ package orchestration
 import (
 	"goagente/internal/communication"
 	"goagente/internal/logging"
+	"goagente/internal/monitoring"
 	"goagente/internal/processing"
 	"time"
 )
@@ -15,8 +16,11 @@ func SendHardwareInfo(client *communication.APIClient, route string) {
 		logging.Error(err)
 		return
 	}
-	// Send the hardware information
-	communication.PostHardwareInfo(client, route, jsonHardware)
+	itsChanged := monitoring.CompareAndUpdateHashHardware(jsonHardware)
+	if itsChanged {
+		communication.PostHardwareInfo(client, route, jsonHardware)
+	}
+	return
 }
 
 // MonitorAndSendCoreInfo continuously monitors and sends core information at specified intervals.
@@ -28,10 +32,11 @@ func MonitorAndSendCoreInfo(client *communication.APIClient, route string, secon
 			logging.Error(err)
 			continue
 		}
-		// Send the core information
-		communication.PostCoreInfo(client, route, jsonCore)
+		itsChanged := monitoring.CompareAndUpdateHashCore(jsonCore)
+		if itsChanged {
+			communication.PostCoreInfo(client, route, jsonCore)
+		}
 
-		// Wait for the specified interval before sending again
 		time.Sleep(time.Duration(seconds) * time.Second)
 	}
 }
@@ -44,8 +49,11 @@ func SendProgramInfo(client *communication.APIClient, route string, seconds int)
 			logging.Error(err)
 			return
 		}
-		// Send the hardware information
-		communication.PostHardwareInfo(client, route, jsonProgram)
+		itsChanged := monitoring.CompareAndUpdateHashPrograms(jsonProgram)
+
+		if itsChanged {
+			communication.PostProgramInfo(client, route, jsonProgram)
+		}
 
 		time.Sleep(time.Duration(seconds) * time.Second)
 	}

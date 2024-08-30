@@ -6,7 +6,6 @@ import (
 	"goagente/internal/data"
 	"goagente/internal/logging"
 	"os"
-	"time"
 )
 
 func CreateCoreinfoJSON() (string, error) {
@@ -35,7 +34,6 @@ func CreateCoreinfoJSON() (string, error) {
 		Hostname:   hostname,
 		Username:   username,
 		Patrimonio: string(patNumber),
-		Timestamp:  time.Now().Format(time.RFC3339),
 	}
 
 	jsonBytes, err := json.Marshal(result)
@@ -52,5 +50,4 @@ type CoreInfoResult struct {
 	Hostname   string `json:"hostname"`
 	Username   string `json:"username"`
 	Patrimonio string `json:"patrimonio"`
-	Timestamp  string `json:"timestamp"`
 }

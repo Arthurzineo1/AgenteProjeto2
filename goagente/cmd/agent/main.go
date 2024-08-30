@@ -5,9 +5,9 @@ import (
 	"goagente/internal/communication"
 	"goagente/internal/config"
 	logs "goagente/internal/logging"
+	"goagente/internal/monitoring"
 	"goagente/internal/orchestration"
 	"goagente/internal/processing"
-	"time"
 )
 
 func main() {
@@ -20,13 +20,12 @@ func main() {
 	if err != nil {
 		fmt.Println("Erro:", err)
 	}
+	monitoring.CreateHashFiles()
 
 	apiUrl := "https://run.mocky.io"
 	client := communication.NewAPIClient(apiUrl)
 
 	go orchestration.MonitorAndSendCoreInfo(client, communication.EnviaCoreInfos, config.TimeInSecondsForCoreInfoLoop)
-
-	time.Sleep(5 * time.Second)
 
 	orchestration.SendHardwareInfo(client, communication.EnviaHardwareInfos)
 

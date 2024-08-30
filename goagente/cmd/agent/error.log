@@ -396,3 +396,21 @@ ERROR: 2024/08/26 21:37:24 logger.go:40: erro ao enviar as informações de core
 ERROR: 2024/08/26 21:37:30 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
 ERROR: 2024/08/26 21:37:34 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
 ERROR: 2024/08/26 21:37:44 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:00:12 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:00:20 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:00:21 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:00:23 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:00:52 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:01:00 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:01:00 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:01:03 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:01:34 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:01:41 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:01:44 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:04:33 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:04:41 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:04:44 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:04:54 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:05:04 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
+ERROR: 2024/08/29 21:05:11 logger.go:40: erro ao enviar as informações de hardware para o servidor, status: 404 Not Found
+ERROR: 2024/08/29 21:05:14 logger.go:40: erro ao enviar as informações de core para o servidor, rota: v3/1804faad-24f0-4e25-ada2-945dfb483fb2, status: 404 Not Found
