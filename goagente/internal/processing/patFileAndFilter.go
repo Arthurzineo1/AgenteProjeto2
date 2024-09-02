@@ -15,7 +15,8 @@ func CheckAndCreateFile() error {
 		// Se o arquivo não existe, cria-o
 		file, err := os.Create(filePath)
 		if err != nil {
-			logging.Error(err)
+			newErr := fmt.Errorf("erro ao criar o arquivo pat.txt: %v", err)
+			logging.Error(newErr)
 			return fmt.Errorf("erro ao criar o arquivo: %v", err)
 		}
 		file.Close()
@@ -26,13 +27,16 @@ func CheckAndCreateFile() error {
 	// Abre o arquivo para leitura
 	file, err := os.Open(filePath)
 	if err != nil {
+		newErr := fmt.Errorf("erro ao abrir o arquivo pat.txt: %v", err)
+		logging.Error(newErr)
 		return fmt.Errorf("erro ao abrir o arquivo: %v", err)
 	}
 
 	// Verifica se o arquivo está vazio
 	fi, err := file.Stat()
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao obter informações do arquivo pat.txt: %v", err)
+		logging.Error(newErr)
 		file.Close()
 		return fmt.Errorf("erro ao obter informações do arquivo: %v", err)
 	}
@@ -44,6 +48,8 @@ func CheckAndCreateFile() error {
 		// Se o arquivo estiver vazio, abre-o para escrita
 		file, err = os.OpenFile(filePath, os.O_WRONLY, 0644)
 		if err != nil {
+			newErr := fmt.Errorf("erro ao abrir o arquivo para escrita pat.txt: %v", err)
+			logging.Error(newErr)
 			return fmt.Errorf("erro ao abrir o arquivo para escrita: %v", err)
 		}
 		defer file.Close()
@@ -51,14 +57,16 @@ func CheckAndCreateFile() error {
 		// Escreve a linha desejada
 		hostname, err := data.GetHostname()
 		if err != nil {
-			logging.Error(err)
+			newErr := fmt.Errorf("erro ao obter o hostname: %v", err)
+			logging.Error(newErr)
 			return fmt.Errorf("erro ao obter o hostname: %v", err)
 		}
 		pat := ExtrairSequenciaFinal(hostname)
 
 		_, err = file.WriteString(pat)
 		if err != nil {
-			logging.Error(err)
+			newErr := fmt.Errorf("erro ao escrever no arquivo patrimonio: %v", err)
+			logging.Error(newErr)
 			return fmt.Errorf("erro ao escrever no arquivo: %v", err)
 		}
 		logging.Info("Linha adicionada ao arquivo patrimonio: " + pat)

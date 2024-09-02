@@ -22,12 +22,14 @@ func (c *APIClient) GenericPost(endpoint string, payload interface{}) (*http.Res
 	url := fmt.Sprintf("%s/%s", c.BaseURL, endpoint)
 	jsonPayload, err := json.Marshal(payload)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro marshal genericPost: %s", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 	resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonPayload))
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro post genericpost: %s", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 	return resp, nil

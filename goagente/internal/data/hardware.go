@@ -3,6 +3,7 @@ package data
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"goagente/internal/logging"
 	"os/exec"
 )
@@ -47,7 +48,8 @@ func GetDiskInfo() ([]DiskInfo, error) {
 
 	err := cmd.Run()
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao executar o comando powershell em getdiskinfo: %v", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 
@@ -58,15 +60,18 @@ func GetDiskInfo() ([]DiskInfo, error) {
 	var singleDisk DiskInfo
 	err = json.Unmarshal(out.Bytes(), &singleDisk)
 	if err == nil {
+
 		// Se for um único objeto, coloca em um slice
 		return []DiskInfo{singleDisk}, nil
+
 	}
 
 	// Se falhar como objeto único, tenta deserializar como uma lista de objetos
 	var disks []DiskInfo
 	err = json.Unmarshal(out.Bytes(), &disks)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao deserializar JSON em diskInfo: %v", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 
@@ -84,6 +89,8 @@ func GetProcessorInfo() ([]ProcessorInfo, error) {
 	cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
+		newErr := fmt.Errorf("erro ao executar o comando powershell em GetProcessorInfo: %v", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 
@@ -110,6 +117,8 @@ func GetRAMInfo() ([]RAMInfo, error) {
 	cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
+		newErr := fmt.Errorf("erro ao executar o comando powershell em GetRAMInfo: %v", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 
@@ -126,7 +135,8 @@ func GetRAMInfo() ([]RAMInfo, error) {
 	var ram []RAMInfo
 	err = json.Unmarshal(out.Bytes(), &ram)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao deserializar JSON em RAMInfo: %v", err)
+		logging.Error(newErr)
 		return nil, err
 	}
 
@@ -144,12 +154,16 @@ func GetMotherboardInfo() (MotherboardInfo, error) {
 	cmd.Stdout = &out
 	err := cmd.Run()
 	if err != nil {
+		newErr := fmt.Errorf("erro ao executar o comando powershell em GetMotherboardInfo: %v", err)
+		logging.Error(newErr)
 		return MotherboardInfo{}, err
 	}
 
 	var motherboard MotherboardInfo
 	err = json.Unmarshal(out.Bytes(), &motherboard)
 	if err != nil {
+		newErr := fmt.Errorf("erro ao deserializar JSON em MotherboardInfo: %v", err)
+		logging.Error(newErr)
 		return MotherboardInfo{}, err
 	}
 

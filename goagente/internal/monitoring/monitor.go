@@ -3,6 +3,7 @@ package monitoring
 import (
 	"crypto/sha256"
 	"encoding/hex"
+	"fmt"
 	"goagente/internal/logging"
 	"os"
 )
@@ -16,8 +17,8 @@ func CreateHashFiles() {
 			// File does not exist, so create it
 			f, err := os.Create(file)
 			if err != nil {
-
-				logging.Error(err)
+				newErr := fmt.Errorf("error creating hash file %s: %v", file, err)
+				logging.Error(newErr)
 			}
 			defer f.Close()
 		}

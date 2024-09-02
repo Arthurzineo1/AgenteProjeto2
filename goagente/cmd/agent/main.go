@@ -25,11 +25,11 @@ func main() {
 	apiUrl := "https://run.mocky.io"
 	client := communication.NewAPIClient(apiUrl)
 
-	go orchestration.MonitorAndSendCoreInfo(client, communication.EnviaCoreInfos, config.TimeInSecondsForCoreInfoLoop)
+	go orchestration.MonitorAndSendCoreInfo(client, config.EnviaCoreInfos, config.TimeInSecondsForCoreInfoLoop)
 
-	orchestration.SendHardwareInfo(client, communication.EnviaHardwareInfos)
+	orchestration.SendHardwareInfo(client, config.EnviaHardwareInfos)
 
-	go orchestration.SendProgramInfo(client, communication.EnviaProgramInfos, config.TimeInSecondsForProgramInfoLoop)
+	go orchestration.SendProgramInfo(client, config.EnviaProgramInfos, config.TimeInSecondsForProgramInfoLoop)
 
 	select {}
 }

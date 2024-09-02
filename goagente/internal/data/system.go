@@ -1,6 +1,8 @@
 package data
 
 import (
+	"fmt"
+	"goagente/internal/logging"
 	"os"
 	"os/user"
 	"strings"
@@ -9,6 +11,8 @@ import (
 func GetHostname() (string, error) {
 	hostname, err := os.Hostname()
 	if err != nil {
+		newErr := fmt.Errorf("erro ao obter o hostname: %v", err)
+		logging.Error(newErr)
 		return "", err
 	}
 
@@ -18,6 +22,8 @@ func GetHostname() (string, error) {
 func GetCurrentUser() (string, error) {
 	currentUser, err := user.Current()
 	if err != nil {
+		newErr := fmt.Errorf("erro ao obter o usuário atual: %v", err)
+		logging.Error(newErr)
 		return "", err
 	}
 	username := currentUser.Username

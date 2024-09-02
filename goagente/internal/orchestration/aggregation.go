@@ -1,6 +1,7 @@
 package orchestration
 
 import (
+	"fmt"
 	"goagente/internal/communication"
 	"goagente/internal/logging"
 	"goagente/internal/monitoring"
@@ -12,8 +13,8 @@ import (
 func SendHardwareInfo(client *communication.APIClient, route string) {
 	jsonHardware, err := processing.CreateHardwareInfoJSON()
 	if err != nil {
-		// Log the error and return to avoid sending incomplete data
-		logging.Error(err)
+		newErr := fmt.Errorf("error creating hardware info JSON: %v", err)
+		logging.Error(newErr)
 		return
 	}
 	itsChanged := monitoring.CompareAndUpdateHashHardware(jsonHardware)
@@ -28,8 +29,8 @@ func MonitorAndSendCoreInfo(client *communication.APIClient, route string, secon
 	for {
 		jsonCore, err := processing.CreateCoreinfoJSON()
 		if err != nil {
-			// Log the error and continue the loop
-			logging.Error(err)
+			newErr := fmt.Errorf("error creating core info JSON: %v", err)
+			logging.Error(newErr)
 			continue
 		}
 		itsChanged := monitoring.CompareAndUpdateHashCore(jsonCore)
@@ -45,8 +46,8 @@ func SendProgramInfo(client *communication.APIClient, route string, seconds int)
 	for {
 		jsonProgram, err := processing.GetProgramsInfo()
 		if err != nil {
-			// Log the error and return to avoid sending incomplete data
-			logging.Error(err)
+			newErr := fmt.Errorf("error creating program info JSON: %v", err)
+			logging.Error(newErr)
 			return
 		}
 		itsChanged := monitoring.CompareAndUpdateHashPrograms(jsonProgram)

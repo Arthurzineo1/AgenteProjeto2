@@ -9,7 +9,8 @@ import (
 func PostHardwareInfo(client *APIClient, route string, jsonData string) {
 	resp, err := client.GenericPost(route, jsonData)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao enviar as informações de hardware para o servidor: %s", err)
+		logging.Error(newErr)
 		fmt.Println("Erro ao enviar as informações de hardware para o servidor:", err)
 		return
 	}
@@ -30,7 +31,8 @@ func PostHardwareInfo(client *APIClient, route string, jsonData string) {
 func PostCoreInfo(client *APIClient, route string, jsonData string) {
 	resp, err := client.GenericPost(route, jsonData)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao enviar as informações de core para o servidor: %s", err)
+		logging.Error(newErr)
 		fmt.Println("Erro ao enviar as informações de core para o servidor:", err)
 		return
 	}
@@ -51,7 +53,8 @@ func PostCoreInfo(client *APIClient, route string, jsonData string) {
 func PostProgramInfo(client *APIClient, route string, jsonData string) {
 	resp, err := client.GenericPost(route, jsonData)
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao enviar as informações de programa para o servidor: %s", err)
+		logging.Error(newErr)
 		fmt.Println("Erro ao enviar as informações de programa para o servidor:", err)
 		return
 	}

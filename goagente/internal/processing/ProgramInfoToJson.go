@@ -17,13 +17,15 @@ func GetProgramsInfo() (string, error) {
 	// Lê o número de patrimônio do arquivo pat.txt usando os.ReadFile
 	patNumber, err := os.ReadFile("pat.txt")
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao ler o arquivo de patrimônio GetProgramsInfo: %w", err)
+		logging.Error(newErr)
 		patNumber = []byte("Patrimônio desconhecido")
 	}
 
 	programs, err := data.GetInstalledPrograms()
 	if err != nil {
-		logging.Error(err)
+		newErr := fmt.Errorf("erro ao obter informações dos programas GetProgramsInfo: %w", err)
+		logging.Error(newErr)
 		programs = []data.Program{} // Continua com uma lista vazia de programas
 	}
 
