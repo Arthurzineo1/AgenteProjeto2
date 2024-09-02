@@ -11,5 +11,6 @@
 /cmd/agent/hashcore.txt
 /cmd/agent/hashhardware.txt
 /cmd/agent/hashprogram.txt
+/cmd/agent/pat.txt
 
 
